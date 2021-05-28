@@ -1,7 +1,13 @@
 class Solution:
-    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-    	
-
+	def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+		largest_int = max(candies)
+		list_bool = []
+		for num in candies:
+			if num + extraCandies >= largest_int:
+				list_bool.append(True)
+			else:
+				list_bool.append(False)
+		return list_bool
 
 
 #Steps
