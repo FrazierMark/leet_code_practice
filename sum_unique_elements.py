@@ -1,3 +1,15 @@
+class Solution:
+	def sumOfUnique(self, nums: List[int]) -> int:
+		total = 0
+		for num in nums:
+		#if duplicate num is not in nums add num to total
+			if nums.count(num) == 1:
+				total += num
+		return total
+
+
+
+
 # class Solution:
 # 	def sumOfUnique(self, nums: List[int]) -> int:
 # 		unique_nums = []
@@ -11,37 +23,16 @@
 # 		else:
 # 			return 0
 
-def sumOfUnique(nums):
-		unique_nums = []
-		for num in nums:
-			if num not in unique_nums:
-				unique_nums.append(num)
-			else:
-				unique_nums.remove(num)
-		print(unique_nums)
-		if unique_nums:
-			print sum(unique_nums)
-		else:
-			print 0
-
-# def sumOfUnique(nums):
-#     	unique_nums = []
-#     	for num in nums:
-#     		if num not in unique_nums:
-#     			unique_nums.append(num)
-#     		else:
-#     			unique_nums.remove(num)
-#     	print(unique_nums)
-#     	return sum(unique_nums)
 
 
-sumOfUnique([1,1,1,1,1])
+
+sumOfUnique([1,2,3,2])
 
 
 # iterate through
 # 
-# if num is already in cache don't add
-# add number to cache
+# count the number of times number appears in list,
+# if it appears once, add it to the total
 
 # 1748. Sum of Unique Elements
 # Easy
