@@ -1,8 +1,27 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
+    	triplet_count = 0
+    	for i in range(len(arr)):
+    		for j in range(j+1, len(arr)):
+    			for k in range(j+1, len(arr)):
+    				a_round = abs(arr[i] - arr[j]) <= a
+    				b_round = abs(arr[j] - arr[k]) <= b
+    				c_round = abs(arr[i] - arr[k]) <= c
+
+    				if a_round and b_round and c_round:
+    					triplet_count += 1
+    	return triplet_count
         
 
+# loop through for arr[i] <= a
+# loop through for arr[j] <= b
+# loop through for arr[k] <= c
 
+# check if arr[i] -  arr[j]
+# check if arr[j] - arr[k]
+# check if arr[k] -  len(arr)
+
+# if all three pass, then increase the triplet count
 
 
 
