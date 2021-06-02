@@ -1,5 +1,34 @@
 class Solution:
     def sumBase(self, n: int, k: int) -> int:
+    	converted_num = []
+    	while n is not 0:
+    		r = n % k
+    		converted_num.insert(0, r)
+    		n = n // k
+
+    	return sum(converted_num)
+
+
+
+#Steps
+#Convert n to base k
+	# while n is not 0 ??
+	#- n % k = remainder
+	#- add remainder to list (beware of what position)
+		# converted_num.insert(0, remainder)
+	#- n // k = NEW-- n
+	#- result is original number in base k
+# sum(resulting list)
+
+
+# Algorithmic example on how to convert base 10 to base 5
+
+# 419 in base 10 to base 5 
+# 419 ÷ 5 = 83 r 4, so Base 5 is now: _ _ _ 4.
+# 83 ÷ 5 = 16 r 3, so Base 5 is now: _ _ 3 4.
+# 16 ÷ 5 = 3 r 1, so Base 5 is now: _ 1 3 4.
+# 3 ÷ 5 = 0 r 3, so Base 5 is now: 3 1 3 4.
+# So 419 in base 10 is 3134 in base 5.
 
 
 
