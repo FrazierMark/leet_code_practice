@@ -87,16 +87,16 @@
 
 
 
-
-
 def pthFactor(n, p):
     factors = []
     x = 1
 
+    # Loops until square root of x
     while x*x <= n:
         if n % x == 0:
             factors.append(x)
 
+            # Only adds factor to list if not already there
             if n // x != x:
                 factors.append(n//x)
         x += 1
@@ -104,15 +104,16 @@ def pthFactor(n, p):
     if p > len(factors) or len(factors) == 0:
         return 0
 
-    print(factors)
+    factors.sort()
 
-    print(factors[p])
+    print(factors)
+    print(factors[p - 1])
 
     
 
 
 
-pthFactor(1, 1)
+pthFactor(10, 5)
 
 
 # Steps
