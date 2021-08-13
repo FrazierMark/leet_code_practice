@@ -72,8 +72,8 @@ class LinkedList(object):
             current = current.next
         if current.value == value:
             if previous:
-                previous.,next = current.next
-                wlse:
+                previous.next = current.next
+            else:
                 self.head = current.next
 
 # Test cases
