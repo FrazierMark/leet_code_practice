@@ -5,21 +5,6 @@ class Solution:
         return res
 
 
-# def frequencySort(nums):
-#     cache = {}
-#     res = []
-#     for num in nums:
-#         if num not in cache.keys():
-#             cache[num] = 1
-#         else:
-#             cache[num] += 1
-
-#     new_cache = sorted(cache.items(), key=lambda x: x[1], reverse=True)
-#     print(new_cache)
-#     for k, v in new_cache:
-#         res += ([k] * v)
-#     print(res) 
-
 
 
 # def frequencySort(nums):
@@ -38,7 +23,8 @@ class Solution:
 # Easy
 
 # Given an array of integers nums, sort the array in increasing order based
-# on the frequency of the values. If multiple values have the same frequency, sort them in decreasing order.
+# on the frequency of the values. If multiple values have the same frequency,
+# sort them in decreasing order.
 
 # Return the sorted array.
 
